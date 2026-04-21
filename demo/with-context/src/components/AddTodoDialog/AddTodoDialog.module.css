@@ -1,0 +1,123 @@
+.addTodoDialog__trigger {
+  width: 100%;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px dashed rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-card);
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  transition: background 0.15s, color 0.15s;
+  margin-top: auto;
+}
+
+.addTodoDialog__trigger:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--color-text);
+}
+
+.addTodoDialog__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.addTodoDialog__content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--color-surface);
+  border-radius: var(--radius-column);
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 420px;
+  z-index: 11;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+.addTodoDialog__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.addTodoDialog__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.addTodoDialog__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.addTodoDialog__label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.addTodoDialog__input,
+.addTodoDialog__textarea {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  font-size: 0.875rem;
+  color: var(--color-text);
+  font-family: inherit;
+  width: 100%;
+  background: var(--color-surface);
+}
+
+.addTodoDialog__input:focus,
+.addTodoDialog__textarea:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 1px;
+}
+
+.addTodoDialog__textarea {
+  resize: vertical;
+}
+
+.addTodoDialog__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.addTodoDialog__cancelBtn {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  transition: background 0.15s;
+}
+
+.addTodoDialog__cancelBtn:hover {
+  background: var(--color-border);
+}
+
+.addTodoDialog__submitBtn {
+  padding: 0.5rem 1rem;
+  background: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-card);
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+.addTodoDialog__submitBtn:hover {
+  background: #2563eb;
+}

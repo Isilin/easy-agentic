@@ -1,0 +1,19 @@
+.kanbanBoard {
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.kanbanBoard__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--color-text);
+}
+
+.kanbanBoard__columns {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}

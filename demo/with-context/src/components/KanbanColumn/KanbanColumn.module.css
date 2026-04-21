@@ -1,0 +1,55 @@
+.kanbanColumn {
+  width: 280px;
+  flex-shrink: 0;
+  border-radius: var(--radius-column);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 200px;
+}
+
+.kanbanColumn--todo {
+  background-color: var(--color-todo);
+}
+
+.kanbanColumn--in-progress {
+  background-color: var(--color-in-progress);
+}
+
+.kanbanColumn--done {
+  background-color: var(--color-done);
+}
+
+.kanbanColumn__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+
+.kanbanColumn__title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.kanbanColumn__count {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.kanbanColumn__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.kanbanColumn--empty {
+  min-height: 60px;
+}
