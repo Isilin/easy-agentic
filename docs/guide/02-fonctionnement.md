@@ -10,6 +10,8 @@ Quand un développeur utilise un assistant de code ou un agent, il ne parle pas 
 4. des outils qu'il peut appeler ;
 5. une boucle de décision qui détermine quoi faire ensuite.
 
+Cet ensemble de couches autour du modèle porte un nom : le **harness** (échafaudage d'exécution). C'est lui qui transforme un LLM en agent. Voir la fiche [Harness](../concepts/harness.md).
+
 Cette distinction est essentielle. Beaucoup d'erreurs viennent du fait qu'on attribue au modèle ce qui relève en réalité de l'outil, du contexte ou de la configuration produit.
 
 ## Prompt, instruction et demande utilisateur

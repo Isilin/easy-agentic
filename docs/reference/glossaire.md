@@ -56,6 +56,10 @@ Contrainte ou limite imposée à un agent pour restreindre ses actions, par exem
 
 Sortie convaincante mais incorrecte ou inventée.
 
+## Harness
+
+Échafaudage d'exécution qui enveloppe le modèle et le transforme en agent : boucle de décision, sélection du contexte, exécution des outils, garde-fous et permissions. Fourni par le produit (Claude Code, Copilot, Cursor…), pas par le modèle seul.
+
 ## Human-in-the-loop
 
 Principe de conception qui consiste à maintenir un point de validation ou de décision humain dans une boucle agentique, notamment avant les actions irréversibles.

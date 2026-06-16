@@ -4,6 +4,10 @@
 
 Faux. Le modèle possède des régularités apprises, pas une connaissance fiable et à jour de votre système local, de votre codebase ou de vos règles internes.
 
+## « Le modèle, c'est l'agent »
+
+Faux. Le modèle prédit du texte. C'est le harness autour de lui — boucle, contexte, outils, garde-fous — qui en fait un agent. À modèle identique, deux harness produisent des comportements très différents.
+
 ## « Si la réponse est bien écrite, elle est probablement correcte »
 
 Faux. La qualité rédactionnelle et la validité technique sont deux choses différentes.

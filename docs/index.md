@@ -24,6 +24,7 @@ Repères sur l'environnement agentic pour les développeurs — comprendre avant
 | [Contexte](concepts/context.md) | Ce que le modèle voit réellement et comment c'est construit |
 | [Extended Thinking](concepts/extended-thinking.md) | Modèles à raisonnement étendu : quand et comment les utiliser |
 | [Fine-tuning](concepts/fine-tuning.md) | Réentraînement partiel — tableau de décision vs RAG vs instructions |
+| [Harness](concepts/harness.md) | Échafaudage d'exécution qui transforme le modèle en agent |
 | [Instruction](concepts/instruction.md) | Règles stables de comportement : où les placer, comment les écrire |
 | [LLM](concepts/llm.md) | Le moteur de prédiction : ce qu'il fait vraiment |
 | [MCP](concepts/mcp.md) | Model Context Protocol : exposition d'outils et de ressources |
