@@ -28,6 +28,7 @@ Repères sur l'environnement agentic pour les développeurs — comprendre avant
 | [Instruction](concepts/instruction.md) | Règles stables de comportement : où les placer, comment les écrire |
 | [LLM](concepts/llm.md) | Le moteur de prédiction : ce qu'il fait vraiment |
 | [MCP](concepts/mcp.md) | Model Context Protocol : exposition d'outils et de ressources |
+| [Orchestrateur](concepts/orchestrateur.md) | Agent qui coordonne plusieurs agents — qui fait quoi, dans quel ordre |
 | [Prompt](concepts/prompt.md) | Assemblage des couches du prompt, techniques de formulation |
 | [RAG](concepts/rag.md) | Retrieval-Augmented Generation : enrichir le contexte depuis une base |
 | [Skills](concepts/skills.md) | Compétences spécialisées exposées à l'agent |

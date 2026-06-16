@@ -58,6 +58,24 @@ Ce que le dépôt configure vient *nourrir* le harness sans le remplacer :
 
 Le dépôt règle les paramètres ; le harness fait tourner la machine.
 
+## Harness ≠ orchestrateur
+
+Deux notions voisines, souvent confondues, mais sur des axes différents :
+
+- **Harness** : ce qui entoure **un** modèle pour en faire un agent (boucle, contexte, outils, garde-fous). Axe vertical : modèle → agent.
+- **Orchestrateur** : ce qui coordonne **plusieurs** agents — qui fait quoi, dans quel ordre, comment les sorties se combinent. Axe horizontal : agent + agent + agent.
+
+Le harness fait *fonctionner* un agent ; l'orchestrateur fait *collaborer* des agents. Et les deux s'emboîtent plutôt qu'ils ne s'opposent :
+
+```text
+Orchestrateur ......... coordonne
+  └─ Agent principal ... tourne dans son harness
+       ├─ Sous-agent A . tourne dans son harness
+       └─ Sous-agent B . tourne dans son harness
+```
+
+L'orchestrateur est lui-même un agent (donc dans un harness) dont les « outils » sont les sous-agents qu'il appelle ; chaque sous-agent a son propre harness. Règle simple : **plusieurs agents autonomes coordonnés = orchestration ; un agent qui tourne = harness**. Voir [Orchestration d'agents](../guide/02-fonctionnement.md#orchestration-dagents).
+
 ## Ce que cela change pour un développeur
 
 - À **modèle identique**, deux harness produisent des comportements très différents. Comparer deux outils, c'est surtout comparer leurs harness, pas leurs modèles.

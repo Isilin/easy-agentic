@@ -116,6 +116,10 @@ Modèle capable de traiter plusieurs types d'entrées : texte, image, audio, vid
 
 Capacité à inspecter et comprendre le comportement interne d'un système agentique via le tracing, les logs et les métriques. Voir aussi : Tracing.
 
+## Orchestrateur
+
+Agent qui coordonne plusieurs autres agents : il décide qui fait quoi, dans quel ordre, et comment les sorties se combinent. À distinguer du harness, qui entoure un seul modèle.
+
 ## Orchestration
 
 Coordination de plusieurs agents par un orchestrateur, qui décide qui fait quoi, dans quel ordre, et comment les résultats sont combinés.
