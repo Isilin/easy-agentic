@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1320" viewBox="0 0 1800 1320" role="img" aria-labelledby="title desc">
+  <title id="title">Systemes agentiques : comment tout s'assemble</title>
+  <desc id="desc">Infographie reliant LLM, harness, contexte, outils, boucles, orchestration et garde-fous.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f5f1e8; }
+      .ink { fill: #17212b; }
+      .muted { fill: #58636d; }
+      .white { fill: #ffffff; }
+      .heading { font: 700 29px 'Segoe UI', sans-serif; fill: #17212b; letter-spacing: 0; }
+      .subheading { font: 700 18px 'Segoe UI', sans-serif; fill: #17212b; letter-spacing: 0; }
+      .body { font: 400 16px 'Segoe UI', sans-serif; fill: #17212b; letter-spacing: 0; }
+      .small { font: 400 14px 'Segoe UI', sans-serif; fill: #17212b; letter-spacing: 0; }
+      .tiny { font: 400 12px 'Segoe UI', sans-serif; fill: #58636d; letter-spacing: 0; }
+      .label { font: 700 13px 'Segoe UI', sans-serif; fill: #17212b; letter-spacing: 1px; }
+      .title { font: 700 46px 'Segoe UI', sans-serif; fill: #17212b; letter-spacing: 0; }
+      .light { fill: #ffffff; }
+      .light-muted { fill: #dce4e8; }
+      .light-accent { fill: #9cd7c0; }
+      .light-blue { fill: #d9f0f5; }
+      .light-orange { fill: #edaa37; }
+      .line { stroke: #78909c; stroke-width: 2.5; fill: none; }
+      .dash { stroke: #78909c; stroke-width: 2; fill: none; stroke-dasharray: 7 7; }
+      .arrow { stroke: #17212b; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .arrow-blue { stroke: #147e9f; stroke-width: 3; fill: none; marker-end: url(#arrowBlue); }
+      .arrow-green { stroke: #198754; stroke-width: 3; fill: none; marker-end: url(#arrowGreen); }
+      .arrow-red { stroke: #c14c35; stroke-width: 3; fill: none; marker-end: url(#arrowRed); }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#17212b"/></marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#147e9f"/></marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#198754"/></marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#c14c35"/></marker>
+  </defs>
+
+  <rect class="bg" width="1800" height="1320"/>
+  <rect x="60" y="42" width="1680" height="112" rx="10" fill="#17212b"/>
+  <rect x="92" y="75" width="14" height="47" rx="4" fill="#edaa37"/>
+  <text x="132" y="91" class="title light">Systemes agentiques</text>
+  <text x="132" y="124" class="body light-muted">Carte d'ensemble : du besoin humain a une action verifiee</text>
+  <text x="1680" y="92" text-anchor="end" class="label light-accent">COMPRENDRE AVANT D'AUTOMATISER</text>
+  <text x="1680" y="124" text-anchor="end" class="small light-muted">Un agent n'est pas un LLM seul.</text>
+
+  <!-- Foundations -->
+  <rect x="60" y="190" width="490" height="466" rx="8" fill="#ffffff" stroke="#cbd7d8" stroke-width="2"/>
+  <rect x="60" y="190" width="490" height="52" rx="8" fill="#edaa37"/>
+  <text x="85" y="223" class="heading">1. Briques fondamentales</text>
+  <text x="85" y="272" class="label">MODELE</text>
+  <rect x="85" y="289" width="194" height="114" rx="7" fill="#fff1d6" stroke="#edaa37" stroke-width="2"/>
+  <text x="182" y="326" text-anchor="middle" class="subheading">LLM</text>
+  <text x="182" y="352" text-anchor="middle" class="small">predire token suivant</text>
+  <text x="182" y="375" text-anchor="middle" class="tiny">temperature, tokens,</text>
+  <text x="182" y="392" text-anchor="middle" class="tiny">fenetre de contexte</text>
+  <text x="310" y="272" class="label">ENVIRONNEMENT</text>
+  <rect x="302" y="289" width="220" height="114" rx="7" fill="#d9f0f5" stroke="#147e9f" stroke-width="2"/>
+  <text x="412" y="326" text-anchor="middle" class="subheading">Harness</text>
+  <text x="412" y="352" text-anchor="middle" class="small">fait agir le modele</text>
+  <text x="412" y="375" text-anchor="middle" class="tiny">contexte, boucle, outils,</text>
+  <text x="412" y="392" text-anchor="middle" class="tiny">permissions, historique</text>
+  <path d="M279 346 H300" class="arrow"/>
+  <path d="M302 427 H279 V450" class="arrow"/>
+  <path d="M182 403 V450" class="arrow"/>
+  <rect x="85" y="450" width="437" height="77" rx="7" fill="#e2f3e9" stroke="#198754" stroke-width="2"/>
+  <text x="303" y="482" text-anchor="middle" class="heading">AGENT</text>
+  <text x="303" y="508" text-anchor="middle" class="body">LLM + harness + boucle orientee objectif</text>
+  <line x1="85" y1="555" x2="522" y2="555" class="line"/>
+  <text x="85" y="586" class="subheading">Mieux repondre, trois leviers</text>
+  <text x="85" y="613" class="body">Prompt : consignes et exemples</text>
+  <text x="85" y="637" class="body">RAG : connaissances recuperees a la demande</text>
+  <text x="85" y="661" class="body">Fine-tuning : comportement appris et specialise</text>
+
+  <!-- Execution cycle -->
+  <rect x="580" y="190" width="1160" height="466" rx="8" fill="#ffffff" stroke="#cbd7d8" stroke-width="2"/>
+  <rect x="580" y="190" width="1160" height="52" rx="8" fill="#147e9f"/>
+  <text x="605" y="223" class="heading light">2. Cycle d'execution : la boucle agentique</text>
+  <text x="1690" y="223" text-anchor="end" class="label light-blue">REACT : OBSERVER - DECIDER - AGIR - VERIFIER</text>
+
+  <rect x="605" y="278" width="155" height="105" rx="7" fill="#edf0f2" stroke="#78909c" stroke-width="2"/>
+  <text x="682" y="318" text-anchor="middle" class="subheading">Besoin</text>
+  <text x="682" y="344" text-anchor="middle" class="small">humain / evenement</text>
+  <text x="682" y="365" text-anchor="middle" class="tiny">synchrone ou event-driven</text>
+
+  <rect x="800" y="278" width="205" height="105" rx="7" fill="#d9f0f5" stroke="#147e9f" stroke-width="2"/>
+  <text x="902" y="310" text-anchor="middle" class="subheading">Contexte utile</text>
+  <text x="902" y="336" text-anchor="middle" class="small">system + historique + tache</text>
+  <text x="902" y="359" text-anchor="middle" class="tiny">instructions, skills, RAG,</text>
+  <text x="902" y="375" text-anchor="middle" class="tiny">compression et selection</text>
+
+  <rect x="1045" y="278" width="155" height="105" rx="7" fill="#fff1d6" stroke="#edaa37" stroke-width="2"/>
+  <text x="1122" y="318" text-anchor="middle" class="subheading">LLM</text>
+  <text x="1122" y="344" text-anchor="middle" class="small">raisonne / propose</text>
+  <text x="1122" y="365" text-anchor="middle" class="tiny">extended thinking selon tache</text>
+
+  <rect x="1240" y="278" width="205" height="105" rx="7" fill="#d9f0f5" stroke="#147e9f" stroke-width="2"/>
+  <text x="1342" y="310" text-anchor="middle" class="subheading">Decision structuree</text>
+  <text x="1342" y="336" text-anchor="middle" class="small">reponse ou function calling</text>
+  <text x="1342" y="359" text-anchor="middle" class="tiny">outil choisi + arguments</text>
+  <text x="1342" y="375" text-anchor="middle" class="tiny">valides par schema</text>
+
+  <rect x="1485" y="278" width="225" height="105" rx="7" fill="#e2f3e9" stroke="#198754" stroke-width="2"/>
+  <text x="1597" y="310" text-anchor="middle" class="subheading">Action et observation</text>
+  <text x="1597" y="336" text-anchor="middle" class="small">outil, MCP, API, terminal</text>
+  <text x="1597" y="359" text-anchor="middle" class="tiny">resultat reinjecte au contexte</text>
+
+  <path d="M760 331 H798" class="arrow-blue"/>
+  <path d="M1005 331 H1043" class="arrow"/>
+  <path d="M1200 331 H1238" class="arrow-blue"/>
+  <path d="M1445 331 H1483" class="arrow-green"/>
+  <rect x="1045" y="465" width="365" height="74" rx="37" fill="#17212b"/>
+  <text x="1227" y="496" text-anchor="middle" class="subheading light">Objectif atteint et verifie ?</text>
+  <text x="1227" y="519" text-anchor="middle" class="small light-muted">tests, lecture resultat, regles metier</text>
+  <path d="M1597 383 V445 H1410" class="arrow"/>
+  <path d="M1045 502 H954 V424 H902 V385" class="arrow-blue"/>
+  <path d="M1410 502 H1500 V568 H1650" class="arrow-green"/>
+  <text x="1657" y="572" class="small">sortie finale</text>
+  <text x="621" y="592" class="tiny">Limites du harness : max tours, budget tokens, timeout. Une verification peut relancer le cycle.</text>
+  <rect x="621" y="612" width="1088" height="24" rx="4" fill="#f9e1db"/>
+  <text x="638" y="629" class="tiny" fill="#8d3224">Zone de controle : ecriture, suppression et deploiement demandent souvent validation humaine.</text>
+
+  <!-- Coordination -->
+  <rect x="60" y="688" width="690" height="364" rx="8" fill="#ffffff" stroke="#cbd7d8" stroke-width="2"/>
+  <rect x="60" y="688" width="690" height="52" rx="8" fill="#76594a"/>
+  <text x="85" y="721" class="heading light">3. Coordonner le travail</text>
+  <text x="85" y="774" class="subheading">Workflow : sequence explicite de taches</text>
+  <rect x="85" y="794" width="120" height="50" rx="5" fill="#edf0f2"/><text x="145" y="825" text-anchor="middle" class="small">reproduire</text>
+  <path d="M205 819 H231" class="arrow"/>
+  <rect x="235" y="794" width="120" height="50" rx="5" fill="#edf0f2"/><text x="295" y="825" text-anchor="middle" class="small">corriger</text>
+  <path d="M355 819 H381" class="arrow"/>
+  <rect x="385" y="794" width="120" height="50" rx="5" fill="#edf0f2"/><text x="445" y="825" text-anchor="middle" class="small">tester</text>
+  <path d="M505 819 H531" class="arrow"/>
+  <rect x="535" y="794" width="120" height="50" rx="5" fill="#edf0f2"/><text x="595" y="825" text-anchor="middle" class="small">resumer</text>
+  <line x1="85" y1="873" x2="725" y2="873" class="line"/>
+  <text x="85" y="905" class="subheading">Orchestrateur : agent dont les outils sont des agents</text>
+  <rect x="334" y="925" width="145" height="52" rx="6" fill="#fff1d6" stroke="#edaa37" stroke-width="2"/>
+  <text x="406" y="957" text-anchor="middle" class="small">orchestrateur</text>
+  <rect x="100" y="989" width="140" height="40" rx="5" fill="#d9f0f5"/><text x="170" y="1014" text-anchor="middle" class="small">investigation</text>
+  <rect x="337" y="989" width="140" height="40" rx="5" fill="#d9f0f5"/><text x="407" y="1014" text-anchor="middle" class="small">correctif</text>
+  <rect x="575" y="989" width="140" height="40" rx="5" fill="#d9f0f5"/><text x="645" y="1014" text-anchor="middle" class="small">verification</text>
+  <path d="M365 977 L210 987" class="arrow-blue"/><path d="M407 977 V987" class="arrow-blue"/><path d="M449 977 L605 987" class="arrow-blue"/>
+
+  <!-- Operations -->
+  <rect x="780" y="688" width="960" height="364" rx="8" fill="#ffffff" stroke="#cbd7d8" stroke-width="2"/>
+  <rect x="780" y="688" width="960" height="52" rx="8" fill="#c14c35"/>
+  <text x="805" y="721" class="heading light">4. Exploiter avec controle</text>
+  <text x="805" y="775" class="subheading">Chaque dimension traverse tout le systeme</text>
+  <rect x="805" y="798" width="205" height="202" rx="7" fill="#fff1d6" stroke="#edaa37" stroke-width="2"/>
+  <text x="825" y="832" class="label">COUT</text><text x="825" y="862" class="subheading">Tokens et tours</text><text x="825" y="888" class="small">Risque : contexte inutile</text><text x="825" y="912" class="small">Levier : caching,</text><text x="825" y="934" class="small">compression, bon modele</text>
+  <rect x="1032" y="798" width="205" height="202" rx="7" fill="#d9f0f5" stroke="#147e9f" stroke-width="2"/>
+  <text x="1052" y="832" class="label">LATENCE</text><text x="1052" y="862" class="subheading">Temps de reponse</text><text x="1052" y="888" class="small">Risque : tache trop lente</text><text x="1052" y="912" class="small">Levier : streaming,</text><text x="1052" y="934" class="small">limites et modele adapte</text>
+  <rect x="1259" y="798" width="205" height="202" rx="7" fill="#e2f3e9" stroke="#198754" stroke-width="2"/>
+  <text x="1279" y="832" class="label">QUALITE</text><text x="1279" y="862" class="subheading">Resultat fiable</text><text x="1279" y="888" class="small">Risque : hallucination</text><text x="1279" y="912" class="small">Levier : tests, golden</text><text x="1279" y="934" class="small">dataset, tracing, evals</text>
+  <rect x="1486" y="798" width="229" height="202" rx="7" fill="#f9e1db" stroke="#c14c35" stroke-width="2"/>
+  <text x="1506" y="832" class="label">SECURITE ET DONNEES</text><text x="1506" y="862" class="subheading">Pouvoir et confiance</text><text x="1506" y="888" class="small">Risque : prompt injection</text><text x="1506" y="912" class="small">Levier : moindre privilege,</text><text x="1506" y="934" class="small">sandbox, humain, RGPD</text>
+  <text x="805" y="1030" class="tiny">Prompt injection : contenu externe tente de modifier l'agent. Ce n'est pas une hallucination.</text>
+
+  <!-- Footer -->
+  <rect x="60" y="1080" width="1680" height="180" rx="8" fill="#17212b"/>
+  <text x="90" y="1122" class="heading light">Lire la carte</text>
+  <text x="90" y="1154" class="body light-muted">Le LLM genere. Le harness cadre. Le contexte informe. Les outils agissent. Les boucles verifient.</text>
+  <text x="90" y="1190" class="small light-accent">Quand le risque ou l'impact augmente : reduire permissions, isoler execution, exiger validation humaine.</text>
+  <line x1="1200" y1="1112" x2="1200" y2="1230" stroke="#58636d" stroke-width="2"/>
+  <text x="1230" y="1142" class="label light-orange">VOCABULAIRE CLE</text>
+  <text x="1230" y="1174" class="small light-muted">RAG = recherche avant generation</text>
+  <text x="1230" y="1200" class="small light-muted">MCP = standard outils et ressources</text>
+  <text x="1230" y="1226" class="small light-muted">Human-in-the-loop = arret pour decision humaine</text>
+  <text x="90" y="1296" class="tiny">easy-agentic | Documentation en francais pour developpeurs</text>
+</svg>

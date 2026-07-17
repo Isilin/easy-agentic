@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1260" viewBox="0 0 1800 1260" role="img" aria-labelledby="title desc">
+  <title id="title">Carte des liens entre concepts agentiques</title>
+  <desc id="desc">Infographie montrant comment un agent relie LLM, harness, contexte, RAG, outils, MCP, skills, fine-tuning, boucle et orchestration.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f5f1e8; }
+      .ink { fill: #17212b; }
+      .white { fill: #ffffff; }
+      .heading { font: 700 30px 'Segoe UI', sans-serif; fill: #17212b; letter-spacing: 0; }
+      .subheading { font: 700 20px 'Segoe UI', sans-serif; fill: #17212b; letter-spacing: 0; }
+      .body { font: 400 16px 'Segoe UI', sans-serif; fill: #17212b; letter-spacing: 0; }
+      .small { font: 400 14px 'Segoe UI', sans-serif; fill: #17212b; letter-spacing: 0; }
+      .tiny { font: 400 12px 'Segoe UI', sans-serif; fill: #58636d; letter-spacing: 0; }
+      .label { font: 700 13px 'Segoe UI', sans-serif; fill: #17212b; letter-spacing: 1px; }
+      .title { font: 700 46px 'Segoe UI', sans-serif; fill: #ffffff; letter-spacing: 0; }
+      .light { fill: #ffffff; }
+      .light-muted { fill: #dce4e8; }
+      .line { stroke: #78909c; stroke-width: 2.5; fill: none; }
+      .dash { stroke: #78909c; stroke-width: 2; fill: none; stroke-dasharray: 8 7; }
+      .arrow { stroke: #17212b; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .arrow-blue { stroke: #147e9f; stroke-width: 3; fill: none; marker-end: url(#arrowBlue); }
+      .arrow-green { stroke: #198754; stroke-width: 3; fill: none; marker-end: url(#arrowGreen); }
+      .arrow-orange { stroke: #c77c17; stroke-width: 3; fill: none; marker-end: url(#arrowOrange); }
+      .arrow-red { stroke: #c14c35; stroke-width: 3; fill: none; marker-end: url(#arrowRed); }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#17212b"/></marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#147e9f"/></marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#198754"/></marker>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#c77c17"/></marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#c14c35"/></marker>
+  </defs>
+
+  <rect class="bg" width="1800" height="1260"/>
+  <rect x="60" y="42" width="1680" height="112" rx="10" fill="#17212b"/>
+  <rect x="92" y="75" width="14" height="47" rx="4" fill="#edaa37"/>
+  <text x="132" y="91" class="title">Carte des liens agentiques</text>
+  <text x="132" y="124" class="body light-muted">Qui modifie le modele, qui enrichit le contexte, qui agit et qui coordonne ?</text>
+  <text x="1680" y="91" text-anchor="end" class="label light">LECTURE : FLECHE = FLUX OU DEPENDANCE</text>
+  <text x="1680" y="123" text-anchor="end" class="small light-muted">Couleurs : contexte, modele, action, controle</text>
+
+  <!-- Context inputs -->
+  <rect x="60" y="190" width="510" height="596" rx="8" fill="#ffffff" stroke="#cbd7d8" stroke-width="2"/>
+  <rect x="60" y="190" width="510" height="52" rx="8" fill="#147e9f"/>
+  <text x="85" y="223" class="heading light">1. Contexte au moment T</text>
+  <text x="85" y="273" class="body">Le prompt assemble ce que le LLM peut voir maintenant.</text>
+  <rect x="85" y="302" width="210" height="76" rx="7" fill="#d9f0f5" stroke="#147e9f" stroke-width="2"/>
+  <text x="105" y="332" class="subheading">Instruction</text>
+  <text x="105" y="356" class="small">regles stables : systeme,</text><text x="105" y="374" class="small">produit, equipe, depot</text>
+  <rect x="325" y="302" width="215" height="76" rx="7" fill="#d9f0f5" stroke="#147e9f" stroke-width="2"/>
+  <text x="345" y="332" class="subheading">Demande courante</text>
+  <text x="345" y="356" class="small">message utilisateur,</text><text x="345" y="374" class="small">objectif et contraintes</text>
+  <rect x="85" y="402" width="210" height="76" rx="7" fill="#d9f0f5" stroke="#147e9f" stroke-width="2"/>
+  <text x="105" y="432" class="subheading">Historique</text>
+  <text x="105" y="456" class="small">conversation, decisions,</text><text x="105" y="474" class="small">resume et compression</text>
+  <rect x="325" y="402" width="215" height="76" rx="7" fill="#d9f0f5" stroke="#147e9f" stroke-width="2"/>
+  <text x="345" y="432" class="subheading">Contexte actif</text>
+  <text x="345" y="456" class="small">fichiers, selection,</text><text x="345" y="474" class="small">etat outil, environnement</text>
+  <rect x="85" y="520" width="455" height="94" rx="8" fill="#17212b"/>
+  <text x="312" y="554" text-anchor="middle" class="heading light">PROMPT</text>
+  <text x="312" y="580" text-anchor="middle" class="small light-muted">instructions + historique + contexte actif + demande</text>
+  <path d="M190 378 V518" class="arrow-blue"/><path d="M432 378 V518" class="arrow-blue"/>
+  <path d="M190 478 V518" class="arrow-blue"/><path d="M432 478 V518" class="arrow-blue"/>
+  <text x="85" y="662" class="subheading">RAG : contexte externe, a la demande</text>
+  <rect x="85" y="682" width="135" height="60" rx="6" fill="#e2f3e9" stroke="#198754" stroke-width="2"/>
+  <text x="152" y="710" text-anchor="middle" class="small">sources</text><text x="152" y="729" text-anchor="middle" class="tiny">docs, base, web</text>
+  <rect x="258" y="682" width="135" height="60" rx="6" fill="#e2f3e9" stroke="#198754" stroke-width="2"/>
+  <text x="325" y="710" text-anchor="middle" class="small">retrieval</text><text x="325" y="729" text-anchor="middle" class="tiny">embeddings, rerank</text>
+  <rect x="430" y="682" width="110" height="60" rx="6" fill="#e2f3e9" stroke="#198754" stroke-width="2"/>
+  <text x="485" y="710" text-anchor="middle" class="small">extraits</text><text x="485" y="729" text-anchor="middle" class="tiny">au prompt</text>
+  <path d="M220 712 H256" class="arrow-green"/><path d="M393 712 H428" class="arrow-green"/>
+  <path d="M485 682 V642 H312 V616" class="arrow-green"/>
+  <text x="85" y="769" class="tiny">Plus de contexte ne vaut pas mieux contexte : selection, structure et fraicheur comptent.</text>
+
+  <!-- Agent core -->
+  <rect x="610" y="190" width="580" height="596" rx="8" fill="#ffffff" stroke="#cbd7d8" stroke-width="2"/>
+  <rect x="610" y="190" width="580" height="52" rx="8" fill="#edaa37"/>
+  <text x="635" y="223" class="heading">2. Agent = LLM dans un harness</text>
+  <rect x="650" y="275" width="500" height="390" rx="20" fill="#edf0f2" stroke="#147e9f" stroke-width="4"/>
+  <text x="680" y="309" class="label">HARNESS</text>
+  <text x="680" y="332" class="small">cadre le modele : contexte, boucle, outils, permissions, historique</text>
+  <rect x="693" y="365" width="414" height="178" rx="12" fill="#fff1d6" stroke="#edaa37" stroke-width="3"/>
+  <text x="900" y="415" text-anchor="middle" class="heading">LLM</text>
+  <text x="900" y="448" text-anchor="middle" class="body">genere texte et propositions structurees</text>
+  <text x="900" y="477" text-anchor="middle" class="small">tokens, probabilites, temperature, fenetre de contexte</text>
+  <text x="900" y="504" text-anchor="middle" class="tiny">extended thinking : plus de raisonnement interne pour taches complexes</text>
+  <rect x="693" y="570" width="414" height="65" rx="7" fill="#d9f0f5" stroke="#147e9f" stroke-width="2"/>
+  <text x="900" y="598" text-anchor="middle" class="subheading">Agent</text>
+  <text x="900" y="621" text-anchor="middle" class="small">modele + environnement d'execution + objectif</text>
+  <path d="M570 567 H648" class="arrow-blue"/>
+  <text x="628" y="555" text-anchor="end" class="tiny">prompt</text>
+  <text x="650" y="706" class="subheading">Fine-tuning : change le comportement du modele</text>
+  <text x="650" y="733" class="body">Reentrainement sur exemples. Pas une base de connaissances a consulter.</text>
+  <path d="M900 760 V545" class="arrow-orange"/>
+  <text x="915" y="750" class="tiny">poids du modele</text>
+  <text x="650" y="769" class="tiny">Alternative souvent preferee : instruction claire ou RAG, selon besoin.</text>
+
+  <!-- Action and capability -->
+  <rect x="1230" y="190" width="510" height="596" rx="8" fill="#ffffff" stroke="#cbd7d8" stroke-width="2"/>
+  <rect x="1230" y="190" width="510" height="52" rx="8" fill="#198754"/>
+  <text x="1255" y="223" class="heading light">3. Capacites et actions</text>
+  <rect x="1255" y="274" width="210" height="114" rx="7" fill="#e2f3e9" stroke="#198754" stroke-width="2"/>
+  <text x="1275" y="305" class="subheading">Skill</text>
+  <text x="1275" y="330" class="small">competence reutilisable :</text><text x="1275" y="351" class="small">instructions + ressources</text><text x="1275" y="372" class="small">+ outils adaptes</text>
+  <rect x="1495" y="274" width="215" height="114" rx="7" fill="#e2f3e9" stroke="#198754" stroke-width="2"/>
+  <text x="1515" y="305" class="subheading">Tool</text>
+  <text x="1515" y="330" class="small">action atomique :</text><text x="1515" y="351" class="small">lire, chercher, ecrire,</text><text x="1515" y="372" class="small">tester, appeler API</text>
+  <rect x="1255" y="426" width="455" height="85" rx="8" fill="#17212b"/>
+  <text x="1482" y="459" text-anchor="middle" class="heading light">MCP</text>
+  <text x="1482" y="485" text-anchor="middle" class="small light-muted">protocole standard : expose outils et ressources au client agent</text>
+  <path d="M1465 331 H1493" class="arrow-green"/>
+  <path d="M1602 388 V424" class="arrow-green"/>
+  <rect x="1255" y="550" width="455" height="92" rx="8" fill="#edf0f2" stroke="#78909c" stroke-width="2"/>
+  <text x="1275" y="582" class="subheading">Monde externe</text>
+  <text x="1275" y="607" class="body">repo, terminal, API, tickets, CI, bases, navigateurs</text>
+  <text x="1275" y="628" class="tiny">un resultat d'outil devient nouveau contexte pour le prochain tour</text>
+  <path d="M1482 511 V548" class="arrow-green"/>
+  <path d="M1190 467 H1253" class="arrow-green"/>
+  <text x="1200" y="455" class="tiny">function calling</text>
+  <path d="M1255 626 H1215 V688 H1152" class="arrow-green"/>
+  <text x="1255" y="704" class="subheading">Guardrails : le harness limite permissions et valide les actions sensibles.</text>
+  <text x="1255" y="737" class="tiny">MCP standardise acces. Il ne rend pas acces automatiquement sur.</text>
+
+  <!-- Loop and orchestration -->
+  <rect x="60" y="822" width="1680" height="334" rx="8" fill="#ffffff" stroke="#cbd7d8" stroke-width="2"/>
+  <rect x="60" y="822" width="1680" height="52" rx="8" fill="#c14c35"/>
+  <text x="85" y="855" class="heading light">4. La boucle fait systeme, l'orchestrateur change echelle</text>
+  <rect x="85" y="902" width="840" height="204" rx="8" fill="#f9e1db" stroke="#c14c35" stroke-width="2"/>
+  <text x="110" y="934" class="subheading">Boucle agentique</text>
+  <text x="110" y="958" class="small">Le harness repete ce cycle jusqu'au resultat, a une limite ou a une validation humaine.</text>
+  <rect x="115" y="985" width="130" height="58" rx="6" fill="#ffffff" stroke="#c14c35" stroke-width="2"/><text x="180" y="1020" text-anchor="middle" class="small">observer</text>
+  <rect x="295" y="985" width="130" height="58" rx="6" fill="#ffffff" stroke="#c14c35" stroke-width="2"/><text x="360" y="1020" text-anchor="middle" class="small">decider</text>
+  <rect x="475" y="985" width="130" height="58" rx="6" fill="#ffffff" stroke="#c14c35" stroke-width="2"/><text x="540" y="1020" text-anchor="middle" class="small">agir</text>
+  <rect x="655" y="985" width="130" height="58" rx="6" fill="#ffffff" stroke="#c14c35" stroke-width="2"/><text x="720" y="1020" text-anchor="middle" class="small">verifier</text>
+  <path d="M245 1014 H293" class="arrow-red"/><path d="M425 1014 H473" class="arrow-red"/><path d="M605 1014 H653" class="arrow-red"/>
+  <path d="M720 1043 V1070 H180 V1045" class="arrow-red"/>
+  <text x="110" y="1086" class="tiny">Variantes : verification loop, hill climbing, event-driven, human-in-the-loop.</text>
+  <rect x="955" y="902" width="755" height="204" rx="8" fill="#d9f0f5" stroke="#147e9f" stroke-width="2"/>
+  <text x="980" y="934" class="subheading">Orchestrateur et workflow</text>
+  <text x="980" y="958" class="small">Un agent principal decoupe, delegue, fusionne resultats et traite erreurs.</text>
+  <rect x="1240" y="977" width="180" height="56" rx="7" fill="#fff1d6" stroke="#edaa37" stroke-width="2"/><text x="1330" y="1011" text-anchor="middle" class="small">orchestrateur</text>
+  <rect x="990" y="1050" width="150" height="39" rx="5" fill="#ffffff" stroke="#147e9f" stroke-width="2"/><text x="1065" y="1075" text-anchor="middle" class="small">sous-agent A</text>
+  <rect x="1255" y="1050" width="150" height="39" rx="5" fill="#ffffff" stroke="#147e9f" stroke-width="2"/><text x="1330" y="1075" text-anchor="middle" class="small">sous-agent B</text>
+  <rect x="1520" y="1050" width="150" height="39" rx="5" fill="#ffffff" stroke="#147e9f" stroke-width="2"/><text x="1595" y="1075" text-anchor="middle" class="small">sous-agent C</text>
+  <path d="M1285 1033 L1100 1048" class="arrow-blue"/><path d="M1330 1033 V1048" class="arrow-blue"/><path d="M1375 1033 L1555 1048" class="arrow-blue"/>
+  <text x="980" y="1125" class="tiny">Workflow = ordre explicite. Orchestration = choix dynamique des agents, taches et dependances.</text>
+
+  <rect x="60" y="1186" width="1680" height="42" rx="7" fill="#17212b"/>
+  <text x="85" y="1212" class="small light-muted">Modele: LLM. Execution: harness. Information: contexte et RAG. Capacites: skills, tools, MCP. Echelle: boucle, workflow, orchestrateur.</text>
+</svg>

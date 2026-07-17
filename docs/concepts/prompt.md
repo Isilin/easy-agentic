@@ -43,6 +43,24 @@ Ce que ça change pour vous :
 - Vos fichiers `instructions/` alimentent le system prompt.
 - Vous ne voyez généralement pas les couches system et history dans l'interface.
 
+## Zero-shot et few-shot
+
+Selon le nombre d'exemples placés dans le prompt :
+
+- **Zero-shot** : aucune démonstration, seulement la consigne. Suffit pour les tâches courantes et bien spécifiées.
+- **Few-shot** : quelques paires entrée/sortie insérées avant la demande, pour cadrer le format et le comportement attendus quand la consigne seule ne suffit pas.
+
+```text
+[USER]
+Classe le ton du message : positif, neutre, négatif.
+
+Message: "Build cassé depuis 2h, personne ne répond." → négatif
+Message: "Merci, le fix marche nickel." → positif
+Message: "PR mergée, je passe au ticket suivant." →
+```
+
+Les exemples consomment du contexte : en mettre juste assez pour lever l'ambiguïté, pas plus.
+
 ## Convention de fichiers proposée
 
 ```text
